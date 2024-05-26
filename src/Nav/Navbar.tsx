@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import NavLayout from "./Navbar.layout";
+import NavLayout from "./NavbarLayout";
 import { Theme } from "../types/enum";
 
 const Navbar = ({

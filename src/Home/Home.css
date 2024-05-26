@@ -1,0 +1,30 @@
+
+
+.navbar {
+    z-index: 1;
+}
+
+
+[data-theme="dark"]
+.landing {
+    position: relative;
+    background-image: url("https://images.alphacoders.com/133/thumb-1920-1337671.jpeg");
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    color: white;
+    overflow: hidden;
+}
+
+
+[data-theme="dark"]
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    background-color: #18181bdd;
+    height: 100vh;
+}
+

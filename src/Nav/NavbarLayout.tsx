@@ -6,7 +6,7 @@ import {
 } from "@mui/icons-material";
 import { Theme } from "../types/enum";
 import { Link } from "react-router-dom";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 const NavLayout = ({
   dataTheme,
   setTheme,
@@ -17,9 +17,8 @@ const NavLayout = ({
   const handleBtn = {
     onClick: () => {
       setTheme((prev: Theme) =>
-        prev == Theme.LIGHT ? Theme.DARK : Theme.LIGHT
+        prev === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
       );
-      localStorage.setItem("data-theme", dataTheme)
       
     },
     style: { cursor: "pointer" },
@@ -28,6 +27,9 @@ const NavLayout = ({
   const handleNav = () => {
     navRef.current.classList.toggle("done");
   };
+  useEffect(() => {
+    localStorage.setItem("data-theme", dataTheme)
+  }, [dataTheme])
   return (
     <nav className="navbar">
       <div className="container">
